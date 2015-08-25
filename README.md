@@ -37,3 +37,12 @@ You can override via an environment variable like this:
 ```sh
 $ docker run -d -p 10873:873 -e ALLOW='10.0.0.0/8 x.x.x.x/y' nabeken/docker-volume-container-rsync
 ```
+
+## All Variables
+
+* `VOLUME` - Define the volume path (default: `/docker`)
+* `ALLOW` - Which network segments to allow (default: `192.168.0.0/16 172.16.0.0/12`)
+* `VOLUME_NAME` - The logical name of the volume (default: `volume`)
+* `COMMENT` - The share comment (default: `docker volume`)
+* `READ_ONLY` - A boolean to set if the share should be read-only or not (default: `false`)
+* `OWNER/GROUP` - Define the owner/group name or uid/gid to use (default: `nobody/nogroup`)
